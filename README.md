@@ -1,8 +1,4 @@
-# React + Vite
+# React 19 beta playground
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This is my playground for testing out the new features of React 19 beta.
+The results might end up in a new [Papperlapapp](https://papperlapapp.dev) episode.
