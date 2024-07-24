@@ -1,13 +1,12 @@
 import "./App.css";
-import { UpdateName } from "./components/UpdateName.jsx";
+import { Actions } from "./components/actions/actions.jsx";
+import {UseHook} from "./components/useHook/UseHook.jsx";
 
 function App() {
   return (
     <div className={"flex"}>
-      <div className={"w-28 h-36 px-2 pt-1 pb-2 border-2"}>
-          <p>Actions!</p>
-        <UpdateName />
-      </div>
+      {/*<Actions />*/}
+      <UseHook />
     </div>
   );
 }

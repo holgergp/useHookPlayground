@@ -1,9 +1,9 @@
 import { useState, useTransition } from "react";
-import {redirect, updateName} from "../api/api.js";
-import { Input } from "./Input.jsx";
-import { Button } from "./Button.jsx";
+import { redirect, updateName } from "../../api/api.js";
+import { Input } from "../Input.jsx";
+import { Button } from "../Button.jsx";
 
-export function UpdateName({}) {
+export function UpdateName() {
   const [name, setName] = useState("");
   const [error, setError] = useState(null);
   const [isPending, startTransition] = useTransition();
@@ -21,7 +21,11 @@ export function UpdateName({}) {
 
   return (
     <div>
-      <Input className={"mb-2"} value={name} onChange={(event) => setName(event.target.value)} />
+      <Input
+        className={"mb-2"}
+        value={name}
+        onChange={(event) => setName(event.target.value)}
+      />
       <Button onClick={handleSubmit} disabled={isPending}>
         Update
       </Button>
