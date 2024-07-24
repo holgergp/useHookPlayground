@@ -6,19 +6,18 @@ export const FetchedPromise = () => {
       .then((res) => res.json())
       .then((data) => data.version);
   });
-
   return (
     <Suspense fallback={<p>Loading!</p>}>
       <PromiseConsumer
-        value={apiVersions}
+        promise={apiVersions}
       ></PromiseConsumer>
     </Suspense>
   );
 };
 
-const PromiseConsumer = ({ value }) => {
-  const fetchedPromiseValue = use(value);
-  console.log("fetchedPromiseValue", value);
+const PromiseConsumer = ({ promise }) => {
+  const fetchedPromiseValue = use(promise);
+  console.log("fetchedPromiseValue", promise);
 
   return (
     <div className={"w-28 h-36 px-2 pt-1 pb-2 border-2"}>
