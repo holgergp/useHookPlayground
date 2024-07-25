@@ -3,6 +3,7 @@ import { FetchedPromise } from "./FetchedPromise.jsx";
 import { LocalPromiseConditional } from "./LocalPromiseConditional.jsx";
 import { LocalPromiseUnHoisted } from "./LocalPromiseUnhoisted.jsx";
 import { ContextWithUseHook } from "./ContextWithUseHook.jsx";
+import {PromiseSentFromServer} from "./PromiseSentFromServer.jsx";
 
 export const UseHook = () => {
   return (
@@ -13,7 +14,9 @@ export const UseHook = () => {
         <FetchedPromise />
         <LocalPromiseConditional toggle={true} />
         <LocalPromiseUnHoisted />
+        {/*<LocalPromiseWithoutSuspense />*/}
         <ContextWithUseHook />
+        <PromiseSentFromServer />
       </div>
     </div>
   );
