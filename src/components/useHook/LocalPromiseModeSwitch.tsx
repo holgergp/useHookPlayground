@@ -17,28 +17,28 @@ export const LocalPromiseModeSwitch = () => {
 
 const PromiseConsumer = () => {
   const [promise1] = useState(() => {
-    return Promise.resolve("Promise1");
+    console.log("modeswitch? Promise 1");
+
+    return fetch("/api.json")
+      .then((res) => res.json())
+      .then((data) => data.version);
   });
+
   const inlinePromiseValue1 = use(promise1);
 
   useState(() => {
-    console.log("modeswitch? Promise 1");
+    console.log("modeswitch? Promise #2");
   });
 
-  const [promise2] = useState(() => {
-    return Promise.resolve("Promise2");
-  });
-
-  const inlinePromiseValue2 = use(promise2);
+  use(promise1);
 
   useState(() => {
-    console.log("modeswitch? Promise 2");
+    console.log("modeswitch? Promise #3");
   });
 
   return (
     <div>
       <>{inlinePromiseValue1}</>
-      <>{inlinePromiseValue2}</>
     </div>
   );
 };
