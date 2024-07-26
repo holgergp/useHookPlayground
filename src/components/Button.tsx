@@ -1,5 +1,5 @@
 import * as React from "react";
-import { cva } from "class-variance-authority";
+import { cva, VariantProps } from "class-variance-authority";
 import { cn } from "../lib/utils.js";
 
 const buttonVariants = cva(
@@ -30,9 +30,11 @@ const buttonVariants = cva(
     },
   },
 );
-
-const Button = React.forwardRef(
-  ({ className, variant, size, asChild = false, ...props }, ref) => {
+export interface ButtonProps
+  extends React.ButtonHTMLAttributes<HTMLButtonElement>,
+    VariantProps<typeof buttonVariants> {}
+const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
+  ({ className, variant, size, ...props }, ref) => {
     const Comp = "button";
     return (
       <Comp
