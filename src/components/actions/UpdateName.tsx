@@ -1,11 +1,11 @@
 import { useState, useTransition } from "react";
-import { redirect, updateName } from "../../api/api.js";
+import { redirect, updateName } from "../../api/api";
 import { Input } from "../Input.jsx";
 import { Button } from "../Button.jsx";
 
 export function UpdateName() {
   const [name, setName] = useState("");
-  const [error, setError] = useState(null);
+  const [error, setError] = useState<Error | null >(null);
   const [isPending, startTransition] = useTransition();
 
   const handleSubmit = () => {
@@ -29,7 +29,7 @@ export function UpdateName() {
       <Button onClick={handleSubmit} disabled={isPending}>
         Update
       </Button>
-      {error && <p>{error}</p>}
+      {error && <p>{error.name}</p>}
     </div>
   );
 }
