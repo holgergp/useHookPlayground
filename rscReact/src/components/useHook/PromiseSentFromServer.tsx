@@ -1,28 +1,15 @@
-import { use } from "react";
+import { ClientPromiseConsumer } from "./ClientPromiseConsumer";
 
 export async function PromiseSentFromServer() {
-  const resolvedPromise = Promise.resolve("Hello from the server");
+  const promise1 = fetch("https://pokeapi.co/api/v2/pokemon/ditto")
+    .then((res) => res.text())
+    .then((data) => data);
   return (
     <div className={"w-36 h-36 px-2  text-wrap"}>
       <h1>Promise sent from the server</h1>
       <div className={"border-2 pt-1 pb-2"}>
-        <PromiseConsumer promise={resolvedPromise} />
+        <ClientPromiseConsumer promise={promise1} />
       </div>
     </div>
   );
 }
-
-interface PromiseConsumerProps {
-  promise: Promise<any>;
-}
-
-const PromiseConsumer = (props: PromiseConsumerProps) => {
-  const promiseValue = use(props.promise);
-  console.log(`On the server: ${promiseValue}`);
-
-  return (
-    <div>
-      <>{promiseValue}</>
-    </div>
-  );
-};
