@@ -1,22 +1,11 @@
-import { LocalPromiseLongRunningPromises } from "./LocalPromiseLongRunningPromises";
-import {HoistedLocalPromiseLongRunningPromises} from "./HoistedLocalPromiseLongRunningPromises";
+import { HoistedPromises } from "./talkExamples/HoistedPromises";
 
 export const UseHook = () => {
   return (
     <div>
       <h1>Use Hook!</h1>
       <div className={"flex"}>
-        {/*<LocalPromise />*/}
-        {/*<FetchedPromise />*/}
-        {/*<LocalPromiseConditional toggle={true} />*/}
-        {/*<LocalPromiseUnHoisted />*/}
-        {/*<LocalPromiseModeSwitch />*/}
-        {/*<LocalPromiseWithoutSuspense />*/}
-        {/*<ContextWithUseHook />*/}
-{/*
-        <LocalPromiseLongRunningPromises />
-*/}
-        <HoistedLocalPromiseLongRunningPromises />
+        <HoistedPromises />
       </div>
     </div>
   );

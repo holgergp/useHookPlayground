@@ -17,16 +17,13 @@ export const LocalPromiseUnHoisted = () => {
 
 const PromiseConsumer = () => {
   const inlinePromise = Promise.resolve("Test");
-  const inlinePromise2 = Promise.resolve("Test2");
 
   const inlinePromiseValue1 = use(inlinePromise);
-  const inlinePromiseValue2 = use(inlinePromise2);
-  console.log("unhoisted", inlinePromiseValue1, inlinePromiseValue2);
+  console.log("unhoisted", inlinePromiseValue1);
 
   return (
     <div>
       <>{inlinePromiseValue1}</>
-      <>{inlinePromiseValue2}</>
     </div>
   );
 };
