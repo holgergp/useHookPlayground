@@ -3,7 +3,7 @@
 import { createContext, use } from "react";
 
 const MyContext = createContext<string | null>(null);
-export const ContextWithUseHook = () => {
+export const ContextWithUseAPI = () => {
   return (
     <div className={"w-36 h-36 px-2  text-wrap"}>
       <h1>Using a context</h1>

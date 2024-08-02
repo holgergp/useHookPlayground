@@ -3,7 +3,7 @@
 import { Suspense, use, useState } from "react";
 import { ErrorBoundary } from "../ErrorBoundary";
 
-export const UseHookRejectedButAlternative = () => {
+export const UseAPIRejectedButAlternative = () => {
   const [inlinePromise] = useState(() =>
     Promise.reject("Test").catch(() => "Rejected Test"),
   );

@@ -2,7 +2,7 @@
 
 import { Suspense, use, useState } from "react";
 
-export const UseHookConditional = ({ toggle }: { toggle: boolean }) => {
+export const UseAPIConditional = ({ toggle }: { toggle: boolean }) => {
   const [inlinePromise] = useState(() => Promise.resolve("Test"));
 
   return (

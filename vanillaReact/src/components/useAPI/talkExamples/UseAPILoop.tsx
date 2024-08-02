@@ -2,7 +2,7 @@
 
 import { Suspense, use, useState } from "react";
 
-export const UseHookLoop = () => {
+export const UseAPILoop = () => {
   const [promises] = useState(() => [
     Promise.resolve("Test1"),
     Promise.resolve("Test2"),

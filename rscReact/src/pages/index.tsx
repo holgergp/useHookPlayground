@@ -1,7 +1,7 @@
-import { UseHook } from "../components/useHook/UseHook";
+import { UseAPI } from "../components/useAPI/UseAPI";
 
 export default async function HomePage() {
-  return <UseHook />;
+  return <UseAPI />;
 }
 
 export const getConfig = async () => {

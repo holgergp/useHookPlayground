@@ -3,7 +3,7 @@
 import { createContext, use } from "react";
 
 const MyContext = createContext<string | null>(null);
-const ContextWithUseHook = () => (
+const ContextWithUseAPI = () => (
   <MyContext.Provider value={"itsAContext"}>
     <ContextConsumer />
   </MyContext.Provider>

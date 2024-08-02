@@ -2,7 +2,7 @@
 
 import { Suspense, use, useState } from "react";
 
-export const UseHookGenerator = () => {
+export const UseAPIGenerator = () => {
   const [generatedPromises] = useState(() => promiseGenerator());
   return (
     <Suspense fallback={<p>Loading!</p>}>
